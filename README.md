@@ -55,10 +55,10 @@ esp32_lamarzocco/
 
 ## 🎮 Usage
 
--   **Navigate**: Rotate the knob to highlight different settings (Power, Temp, Steam, etc.).
--   **Select**: Press the knob (or tap the icon) to enter "Edit Mode". The icon will move to the center.
--   **Adjust**: Rotate the knob to change the value.
--   **Confirm**: Press the knob again to save and return to the menu.
+-   **Select**: Tap an icon on the screen to select it. It will move to the center.
+-   **Adjust**: Rotate the knob to change the value of the selected item.
+-   **Auto-Save**: Stop rotating the knob. After a short delay (2 seconds), the new value is automatically sent to the machine.
+-   **Return**: Tap the center icon (or background) to return to the main menu.
 
 ## ⚠️ Disclaimer
 
