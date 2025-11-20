@@ -32,12 +32,12 @@ If you cannot find a working pre-built binary, you can build it using Docker.
     Run the following command to build for ESP32-S3 with SPIRAM support:
     ```bash
     docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.4 \
-    /bin/bash -c "make -C mpy-cross && make -C ports/esp32 BOARD=GENERIC_S3_SPIRAM submodules && make -C ports/esp32 BOARD=GENERIC_S3_SPIRAM"
+    /bin/bash -c "make -C mpy-cross && make -C ports/esp32 BOARD=ESP32_GENERIC_S3 BOARD_VARIANT=SPIRAM submodules && make -C ports/esp32 BOARD=ESP32_GENERIC_S3 BOARD_VARIANT=SPIRAM"
     ```
     *   *Note: This assumes a Linux/Mac environment or WSL on Windows.*
 
 3.  **Locate Firmware**:
-    The built firmware will be at `ports/esp32/build-GENERIC_S3_SPIRAM/micropython.bin`.
+    The built firmware will be at `ports/esp32/build-ESP32_GENERIC_S3-SPIRAM/micropython.bin`.
 
 ## ⚡ Flashing the Firmware
 
