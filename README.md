@@ -50,7 +50,7 @@ esp32_lamarzocco/
     -   Enter your WiFi credentials (`WIFI_SSID`, `WIFI_PASSWORD`).
     -   Enter your La Marzocco credentials (`LM_EMAIL`, `LM_PASSWORD`, `LM_MACHINE_ID`).
     -   *Optional*: Verify GPIO pins if your board revision differs.
-3.  **Upload**: Upload all files and folders to the root of the ESP32-S3 using a tool like `mpremote`, `ampy`, or Thonny.
+3.  **Upload**: Upload all files and folders to the root of the ESP32-S3 using a tool like `mpremote` (mpremote cp -r . :), `ampy`, or Thonny.
 4.  **Run**: Reset the board. The UI should start automatically.
 
 ## 🎮 Usage

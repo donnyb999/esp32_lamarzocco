@@ -60,7 +60,7 @@ Once you have the `micropython.bin` file, you need to flash it to your board.
     *(Replace `COMx` with your actual port)*
 4.  **Flash Firmware**:
     ```bash
-    esptool.py -p /dev/ttyACM0 -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+    esptool.py -p /dev/ttyACM0 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode qio --flash_size 16MB --flash_freq 80m 0x0 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
 
     ```
 
