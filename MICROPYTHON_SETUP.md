@@ -60,7 +60,8 @@ Once you have the `micropython.bin` file, you need to flash it to your board.
     *(Replace `COMx` with your actual port)*
 4.  **Flash Firmware**:
     ```bash
-    esptool.py --chip esp32s3 --port COMx write_flash -z 0x0 micropython.bin
+    esptool.py -p /dev/ttyACM0 -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size 8MB --flash_freq 80m 0x0 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/bootloader/bootloader.bin 0x8000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/partition_table/partition-table.bin 0x10000 ports/esp32/build-ESP32_GENERIC_S3-SPIRAM_OCT/micropython.bin
+
     ```
 
 ## ✅ Verification
@@ -70,7 +71,7 @@ Once you have the `micropython.bin` file, you need to flash it to your board.
 3.  You should see the MicroPython REPL prompt `>>>`.
 4.  Type the following to verify LVGL is present:
     ```python
-    import lvgl
-    print(lvgl.VERSION_MAJOR)
+    import lvgl as lv
+    print(lv.version_major())
     ```
     If this runs without error, you are ready to upload the project files!
